@@ -27,3 +27,7 @@ int main() {
         return 1;
     }
     std::cout << "Socket created successfully." << std::endl;
+
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_port = htons(8080);  // Porti i serverit
+    server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");  // IP-ja e serverit
